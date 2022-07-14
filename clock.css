@@ -1,0 +1,138 @@
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: 8% auto 0;
+    position: relative;
+}
+
+.cent {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 20;
+}
+
+.hour-hand {
+    position: absolute;
+    z-index: 15;
+    width: 4px;
+    height: 65px;
+    background: blueviolet;
+    top: 79px;
+    transform-origin: 50% 72px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation-name: hours;
+    animation-duration: 46200s;
+    animation-delay: 3600s;
+    transition: 3600s;
+    animation-iteration-count: infinite;
+}
+
+/* .minute-hand-controller{
+    position: relative;
+    border: 2px solid red;
+    top: 75px;
+    left: 75px;
+} */
+.minute-hand {
+    position: absolute;
+    z-index: 15;
+    width: 4px;
+    height: 95px;
+    background: blueviolet;
+    top: 48px;
+    transform-origin: 50% 105px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation-name: minutes;
+    animation-duration: 3600s;
+    /* animation-delay: 60s; */
+    transition: 60s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes minutes {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.seconds-hand {
+    position: absolute;
+    z-index: 18;
+    width: 2px;
+    height: 120px;
+    background: rgb(43, 107, 226);
+    top: 26px;
+    transform-origin: 50% 125px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 60s;
+    transition: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+span {
+    display: inline-block;
+    position: absolute;
+    color: #333;
+    font-size: 22px;
+    font-family: 'Poiret One';
+    font-weight: 700;
+    z-index: 4;
+}
+
+.t12 {
+    top: 30px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.t3 {
+    top: 140px;
+    right: 30px;
+}
+
+.t6 {
+    bottom: 30px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.t9 {
+    left: 32px;
+    top: 140px;
+}
